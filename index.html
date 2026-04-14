@@ -2,65 +2,88 @@
 <html lang="pt-br">
 <head>
 <meta charset="UTF-8">
-<title>Meu Netflix</title>
+<title>Netflix Clone</title>
+
 <style>
 body {
 margin: 0;
-background: black;
+background: #141414;
 color: white;
-font-family: Arial;
+font-family: Arial, sans-serif;
 }
 
 .header {
-padding: 20px;
-font-size: 30px;
+position: fixed;
+top: 0;
+width: 100%;
+background: rgba(0,0,0,0.8);
+padding: 15px 30px;
+font-size: 25px;
 color: red;
 font-weight: bold;
+z-index: 10;
+}
+
+.banner {
+margin-top: 60px;
+height: 400px;
+background: url('https://images.unsplash.com/photo-1524985069026-dd778a71c7b4') center/cover;
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
+padding: 30px;
+}
+
+.banner h1 {
+font-size: 40px;
+}
+
+.banner button {
+padding: 10px 20px;
+background: white;
+border: none;
+font-weight: bold;
+cursor: pointer;
+margin-top: 10px;
+width: 120px;
 }
 
 .row {
 display: flex;
 overflow-x: auto;
-gap: 10px;
 padding: 20px;
+gap: 10px;
 }
 
 .card {
 min-width: 200px;
 height: 120px;
-background: gray;
+background: #333;
 border-radius: 10px;
 display: flex;
 align-items: center;
 justify-content: center;
-font-size: 18px;
 cursor: pointer;
 transition: 0.3s;
 }
 
 .card:hover {
 transform: scale(1.1);
-}
-
-.banner {
-height: 300px;
-background: url('https://images.unsplash.com/photo-1524985069026-dd778a71c7b4') center/cover;
-display: flex;
-align-items: flex-end;
-padding: 20px;
-font-size: 25px;
+background: #555;
 }
 </style>
+
 </head>
 <body>
 
-<div class="header">Meu Netflix</div>
+<div class="header">NETFLIX</div>
 
 <div class="banner">
-Filme em destaque
+<h1>Filme em Destaque</h1>
+<button>Play</button>
 </div>
 
-<h2 style="padding-left:20px;">Filmes</h2>
+<h2 style="padding-left:20px;">🔥 Populares</h2>
 <div class="row">
 <div class="card">Filme 1</div>
 <div class="card">Filme 2</div>
@@ -68,7 +91,7 @@ Filme em destaque
 <div class="card">Filme 4</div>
 </div>
 
-<h2 style="padding-left:20px;">Séries</h2>
+<h2 style="padding-left:20px;">🎬 Séries</h2>
 <div class="row">
 <div class="card">Série 1</div>
 <div class="card">Série 2</div>
